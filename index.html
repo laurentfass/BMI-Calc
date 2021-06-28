@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculateur d'IMC</title>
+</head>
+<body>
+
+<h2>Calculez votre IMC</h2>
+
+<div id="container">
+
+    <form action="" method="POST" id="#formulaire">
+
+    <div id="ligne">
+        <label for="taille" class="labels" id="poids">Entrez votre poids :</label>
+        <input type="number" id="poids-input">
+    </div>
+
+    <div id="ligne">
+        <label for="taille" class="labels" id="poids">Entrez votre taille en cm :</label>
+        <input type="number" id="taille-input">
+    </div>
+
+    <div id="ligne-btn">
+        <input type="submit" value="Calculer" id="calcul-btn">
+    </div>
+    </form>
+
+    <div id="resultat"></div>
+    <div id="resultat-texte"></div>
+
+    <div id="annonce">   
+
+    </div>
+
+</div>
+
+
+<div id="conseil">
+    <h3>Conseil</h3>
+    <div id="txt1" class="conseil-txt">
+        <p>Retrouvez le plaisir de manger. Achetez vos fruits et légumes frais au marché, prenez le temps de cuisiner, pourquoi  pas en famille ou entre amis ?</p> 
+        <p> Préparer à manger de manière saine peut alors redevenir un véritable moment de plaisir et de partage.</p></div>
+
+    <div id="txt2" class="conseil-txt">
+        <p>Rien ne sert de manger très léger le midi si c'est pour avoir faim dans l'après-midi et se rabattre sur du grignotage ! </p>
+        <p>Le meilleur moyen de favoriser la perte de poids est de respecter un rythme à heure fixe de 3 repas par jour assez complets pour tenir jusqu'au suivant ! Par exemple, n'excluez donc pas complètement les féculents qui permettent de limiter les fringales.</p></div>
+
+    <div id="txt3" class="conseil-txt"><p>L'ennemi numéro 1 de la perte de poids : les sucres ! Mais ceux-ci ont la fâcheuse habitude de se cacher dans beaucoup d'aliments insoupçonnés...</p> 
+        <p>Quelques astuces simples pour les éliminer de votre menu : favorisez la bouteille d'eau plate aux sodas lors de vos déjeuners, bannissez le ketchup et limitez les jus de fruits. Et bien sûr, perdez le réflexe de sucrer vos thés et vos cafés !</p></div>
+
+    <div id="txt4" class="conseil-txt"><p>Manger, bouger nous répète les publicités et     les conseils du Programme National de Nutrition Santé (PNNS). En effet, cette règle simple permet d’agir efficacement contre le surpoids en incitant à  pratiquer une activité sportive régulière.</p> <p>Ainsi, la prescription de sport  sur ordonnance entre progressivement en vigueur pour permettre aux patients en surpoids et obèses de limiter les risques liés à ces maladies et de favoriser la perte de poids.</p><p>Alors à l'occasion de la Journée européenne de l'obésité, pourquoi ne pas se prévoir une bonne séance de votre sport préféré ?</p></div>
+
+    <div id="txt5" class="conseil-txt"><p>Un repas équilibré doit être composé de 100g à 150g de viande (poulet, veau…) ou de poisson (saumon, thon...), 200g de légumes verts ou de crudités, 125g de féculent (pomme de terre, riz, pâtes, quinoa) ou 50g de pain et d'un produit laitier (yaourt, fromage blanc, fromage).</p>
+    </div>
+
+</div>
+
+
+
+<script src="app.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+html { height: 100%; overflow:auto; }
+body { height: 100%; }
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+}
+h2 {
+    color: black;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/*---------- Container et formulaire -------*/
+
+#container {
+    width: 400px;
+    margin: 0 auto;
+    background-color: #6583BC;
+    border-radius: 10px;
+    transition: all 1s ease;
+}
+
+#formulaire {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.labels {
+    width: 200px;
+}
+
+ /* --------------BOUTON CALCUL----------- */
+#ligne-btn {
+    width: 90%;
+    
+    display: block;
+    padding: 20px;
+    text-align: right;
+}
+
+#calcul-btn {
+    padding: 11px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    margin-right: 20px;
+    background-color: #F5F9FF;
+    box-shadow: 0px 0px 12px -2px rgba(0,0,0,0.5);
+    transition: all .2s ease;
+    overflow: hidden;
+
+}
+#calcul-btn:hover {
+    background-color: rgb(167, 155, 137);
+    box-shadow: 0px 0px 20px -2px rgba(0,0,0,0.5);
+    
+}
+
+/* -------INPUTS POIDS ET TAILLE--------- */
+
+#ligne {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#poids-input, #taille-input {
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border: none;
+    font-size: 30px;
+    text-align: center;
+    margin-left: 20px;
+    width: 90px;
+    margin-right: 35px;
+    background-color: #F5F9FF;
+}
+
+#resultat-texte {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    padding-top: 30px;
+    height: 20px;
+    line-height: 10px;
+    text-align: center;
+    font-size: x-large;
+}
+
+#annonce {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    padding-top: 30px;
+    height: 20px;
+    line-height: 10px;
+    text-align: center;
+    font-size: x-large;
+    padding-bottom: 35px;
+    line-height: 1.5em;
+}
+
+/* ---------RESULTAT NOMBRE ET ANIMATION -----  */
+#resultat {
+    font-size: 30px;
+    font-weight: 800;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 20px;
+    text-align: center;
+    transition: all 1s ease;
+    color: black;
+}
+
+#conseil {
+    z-index: -10;
+    bottom: 480px;
+    width: 300px;
+    margin: 0 auto;
+    position: relative;
+    background-color: #a85252;
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.conseil-style {
+    font-size: 16px;
+    padding: 33px;
+    line-height: 20px;
+    margin-top: 20px;
+    color: white;
+    text-align: center;
+}
+
+.move-down {
+    transform: translateY(480px);
+}
+
+
+.fade-in {
+    font-size: 30px;
+    opacity: 1;
+    color: black;
+    animation: identifier 0.8s ease-in-out;
+}
+/* ---------------Animations----------------------- */
+
+@keyframes mymove {
+    from {top: 0px;}
+    to {top: 200px;}
+  }
+@keyframes bigger {
+    from {font-size: 0px;}
+    to {font-size: 80px;}
+  }
+
+@keyframes identifier {
+  0% { font-size: 0px; }
+  50% { font-size: 130px; }
+  100% { font-size: 30px; }
+}
+
+@keyframes error {
+    0%{
+        transform: translateX(0px);
+    }
+    33%{
+        transform: translateX(50px);
+    }
+    66%{
+        transform: translateX(-35px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+/* ---------------RESPONSIVE----------------------- */
+
+@media screen and (max-width: 480px) {
+    h2 {
+        margin: 5px 0 5px 0;
+        font-size: 20px;
+    }
+
+    #container {
+        width: 300px;
+    }
+    
+    #poids-input, #taille-input {
+      width: 50px;
+      height: 20px;
+      font-size: 20px;
+    }
+    .labels {
+        font-size: 12px;
+    }
+    #annonce  {
+        font-size: 16px;
+        padding-top: 5px;
+    }
+    #resultat{
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 25px;
+        margin: 5px 0 5px;
+
+    }
+    #resultat-texte {
+        font-size: 16px;
+        margin: 10px auto;
+        padding-top: 2px;
+    }
+
+    .move-right {
+        transform: translateX(100px);
+
+    }
+    .move-left {
+        transform: translateX(-100px);
+    }
+    #conseil {
+        width: 250px;
+        padding: 15px;
+
+    }
+    .conseil-style {
+        font-size: 14px;
+        padding: 25px;
+        line-height: 20px;
+        margin-top: 15px;
+        color: white;
+        text-align: center;
+    }
+    #ligne-btn {
+        padding: 10px;
+    }
+    #calcul-btn {
+        width: 60px;
+        height: 20px;
+        padding: 2px;
+        font-size: 12px;
+        margin-right: 0;
+    }
+    #ligne {
+        padding: 10px;
+    }
+
+}
